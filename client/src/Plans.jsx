@@ -33,7 +33,7 @@ export default function Plans() {
   });
 
   const GetData = () => {
-    const url = "https://amnztest.herokuapp.com/api/users/me";
+    const url = "https://finalamzn.herokuapp.com/api/users/me";
     fetch(url)
       .then((response) => {
         return response.json();
@@ -48,7 +48,7 @@ export default function Plans() {
   };
 
   const PostData = () => {
-    const url = "https://amnztest.herokuapp.com/api/users/me";
+    const url = "https://finalamzn.herokuapp.com/api/users/me";
 
     const data = {
       firstName: firstName,
@@ -88,7 +88,7 @@ export default function Plans() {
     const headers = {
       "Content-Type": "application/json",
     };
-    return fetch(`https://amnztest.herokuapp.com/api/payments`, {
+    return fetch(`https://finalamzn.herokuapp.com/api/payments`, {
       method: "POST",
       headers,
       body: JSON.stringify(body),
@@ -112,7 +112,7 @@ export default function Plans() {
     const headers = {
       "Content-Type": "application/json",
     };
-    return fetch(`https://amnztest.herokuapp.com/api/payments`, {
+    return fetch(`https://finalamzn.herokuapp.com/api/payments`, {
       method: "POST",
       headers,
       body: JSON.stringify(body),
@@ -137,7 +137,7 @@ export default function Plans() {
     const headers = {
       "Content-Type": "application/json",
     };
-    return fetch(`https://amnztest.herokuapp.com/api/payments`, {
+    return fetch(`https://finalamzn.herokuapp.com/api/payments`, {
       method: "POST",
       headers,
       body: JSON.stringify(body),

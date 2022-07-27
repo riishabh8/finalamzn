@@ -28,7 +28,7 @@ class Home extends React.Component {
 
   onUpdate = () => {
     const { firstName, lastName } = this.state;
-    fetch("https://amnztest.herokuapp.com/api/users/me", {
+    fetch("https://finalamzn.herokuapp.com/api/users/me", {
       method: "PUT",
       body: JSON.stringify({ firstName, lastName }),
       headers: {
@@ -42,7 +42,7 @@ class Home extends React.Component {
   };
 
   onLogout = () => {
-    fetch("https://amnztest.herokuapp.com/api/sessions/me", {
+    fetch("https://finalamzn.herokuapp.com/api/sessions/me", {
       method: "DELETE",
     }).then((res) => {
       if (res.status === 204) {

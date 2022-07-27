@@ -10,7 +10,7 @@ class LoginPage extends React.Component {
   }
 
   componentDidMount() {
-    fetch("https://amnztest.herokuapp.com/api/users/me").then((user) => {
+    fetch("https://finalamzn.herokuapp.com/api/users/me").then((user) => {
       if (user.status === 200) {
         window.location = "/profile";
       }
@@ -24,7 +24,7 @@ class LoginPage extends React.Component {
   onLoginClick = (e) => {
     e.preventDefault();
     const { email, password } = this.state;
-    fetch("https://amnztest.herokuapp.com/api/sessions", {
+    fetch("https://finalamzn.herokuapp.com/api/sessions", {
       method: "POST",
       body: JSON.stringify({ email, password }),
       headers: {
@@ -42,7 +42,7 @@ class LoginPage extends React.Component {
   onSignupClick = (e) => {
     e.preventDefault();
     const { email, password } = this.state;
-    fetch("https://amnztest.herokuapp.com/api/users", {
+    fetch("https://finalamzn.herokuapp.com/api/users", {
       method: "POST",
       body: JSON.stringify({ email, password }),
       headers: {
